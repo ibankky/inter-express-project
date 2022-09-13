@@ -1,8 +1,9 @@
 <template>
   <div>
     <HeaderDefault></HeaderDefault>
-    {{message}}
-    <share-mobile-menu></share-mobile-menu>
+    <section>
+      <banner-slider></banner-slider>
+    </section>
   </div>
 </template>
 <script>
@@ -12,7 +13,6 @@ import CategorySlider from '../components/CategorySlider.vue'
   export default {
   components: { BannerSlider, CategorySlider },
     setup() {
-      const message = ref('INTER EXPRESS Vue.js')
       return {
         message
       }
