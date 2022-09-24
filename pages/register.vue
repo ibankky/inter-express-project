@@ -1,28 +1,36 @@
 <template>
   <div class="bg-gray-2 bg-opacity-20 h-full w-full relative">
-    <HeaderDefault :title="'Log in'"></HeaderDefault>
+    <HeaderDefault :title="'Register'"></HeaderDefault>
     <div class="container px-[15px]">
       <div class="bg-white rounded-[6px] px-2 py-2">
         <input
           type="text"
-          placeholder="เบอร์โทรศัพท์"
-          class="w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
+          placeholder="ชื่อ"
+          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
+        />
+        <input
+          type="text"
+          placeholder="นามสกุล"
+          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
+        />
+        <input
+          type="text"
+          placeholder="เบอร์โทรศัพท์์"
+          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
         />
         <input
           type="password"
           placeholder="รหัสผ่าน"
-          class="w-full bg-white py-4 border-none border-t border-gray focus:ring-0"
+          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
+        />
+        <input
+          type="password"
+          placeholder="ยืนยันรหัสผ่าน"
+          class="form-control w-full border-0 bg-white py-4 focus:ring-0 focus:border-gray"
         />
       </div>
-      <div class="flex justify-end">
-        <div class="pt-[17px]">
-          <nuxt-link :to="'/reset-password'">
-          <span class="text-blue">ลืมรหัสผ่าน</span>
-          </nuxt-link>
-        </div>
-      </div>
       <div class="mt-[250px] pb-4">
-         <nuxt-link :to="'/'">
+        <nuxt-link :to="'/'">
         <div
           class="flex w-full bg-blue border-none text-white text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]"
         >

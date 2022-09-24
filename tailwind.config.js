@@ -14,19 +14,22 @@ module.exports = {
     theme: {
       extend: {
         fontFamily: {
-          'db-heavent': ['DB Heavent', 'Arial', 'sans-serif'],
+          'kanit': ['kanit', 'Arial', 'sans-serif'],
         },
         colors: {
           blue: '#0072BC',
           yelllow: '#FEDD00',
           gray: '#A6A6A6',
+          red: '#E20000',
           'gray-2' : '#919191',
+          'gray-3' : '#777777',
+          fb: '#3B5A9B',
+          linecolor: '#00B100'
           
         },
         fontSize: {
-          'heading-1': ['1.632rem', 1],
-          'heading-2': ['1.316rem', 1],
-          'heading-3': ['1rem', 1],
+          title: ['1.125rem' , '2'],
+          'heading-1': ['1.25rem' , '2'],
           base: ['1rem', 1],
         },
        /*  backgroundImage: {
