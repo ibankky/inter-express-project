@@ -1,14 +1,16 @@
 <template>
     <div>
-        <div class="flex w-100 bg-white mb-[40px] justify-center items-center ">
+        <div class="flex w-100 bg-white mb-[40px] justify-center items-center drop-shadow-lg">
             
             <div class="ml-4" @click="goToPrev()">
                 <img src="icons/back-icon.svg" />
                 </div>
-            <div class="w-full flex justify-center items-center drop-shadow-lg">
+            <div class="w-full flex justify-center items-center ">
                 <p class="text-center text-title py-2 font-bold">{{title}}</p>
             </div>
 
+        </div>
+        <div>
         </div>
     </div>
 </template>
