@@ -16,22 +16,26 @@
         </div>
      </div>  
     <share-mobile-menu></share-mobile-menu>
-    <createshop-modal v-if="showModal"></createshop-modal>
+    <createshop-modal v-if="showModal" @close-modal="showModal = false"></createshop-modal>
   </div>
 </template>
 <script>
-  import { defineComponent, useContext } from 'vue'
+  import { defineComponent, ref ,useContext } from 'vue'
 import CreateshopModal from '../components/modal/CreateshopModal.vue'
   export default defineComponent({
   components: { CreateshopModal },
     setup() {
-      const showModal = false
+      const showModal = ref(false)
        function showModalShop(){
           console.log('showModalShop')
+          showModal.value = true
+          console.log(showModal.value)
       }
       return {
-        showModal,
-        showModalShop
+        showModalShop,
+        
+        showModal
+        
       }
     }
   })

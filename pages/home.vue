@@ -126,14 +126,6 @@ import CreateshopModal from "../components/modal/CreateshopModal.vue";
 export default defineComponent({
   components: { CreateshopModal },
   setup() {
-    const showModal = false;
-    function showModalShop() {
-      console.log("showModalShop");
-    }
-    return {
-      showModal,
-      showModalShop,
-    };
   },
 });
 </script>

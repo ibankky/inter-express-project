@@ -50,7 +50,7 @@
           </div>
         </div>
         <div
-          class="flex w-full border border-gray text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]"
+          class="flex w-full border border-gray bg-white text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]"
         >
           <div class="text-[16px] flex justify-center items-center">
             <img src="icons/google.svg" />

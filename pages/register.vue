@@ -1,35 +1,51 @@
 <template>
   <div class="bg-gray-2 bg-opacity-20 h-full w-full relative">
     <HeaderDefault :title="'Register'"></HeaderDefault>
-    <div class="container px-[15px]">
+    <div class="container px-[15px] min-h-[90vh]">
       <div class="bg-white rounded-[6px] px-2 py-2">
-        <input
-          type="text"
-          placeholder="ชื่อ"
-          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
-        />
-        <input
-          type="text"
-          placeholder="นามสกุล"
-          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
-        />
-        <input
-          type="text"
-          placeholder="เบอร์โทรศัพท์์"
-          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
-        />
-        <input
-          type="password"
-          placeholder="รหัสผ่าน"
-          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
-        />
-        <input
-          type="password"
-          placeholder="ยืนยันรหัสผ่าน"
-          class="form-control w-full border-0 bg-white py-4 focus:ring-0 focus:border-gray"
-        />
+         <div class="text-black flex border-0 border-b border-gray px-2">
+          <div class="w-1/3 flex items-center">
+            <label for="forms-registerName">ชื่อ</label>
+          </div>
+          <div class="w-2/3 flex-grow">
+            <input class="w-full border-0  bg-white py-4 focus:ring-0 focus:border-gray text-right" type="text" placeholder="" id="forms-registerName"/>
+          </div>
+        </div>
+         <div class="text-black flex border-0 border-b border-gray px-2">
+          <div class="w-1/3 flex items-center">
+            <label for="forms-registerLastName">นามสกุล</label>
+          </div>
+          <div class="w-2/3 flex-grow">
+            <input class="w-full border-0  bg-white py-4 focus:ring-0 focus:border-gray text-right" type="text" placeholder="" id="forms-registerLastName"/>
+          </div>
+        </div>
+         <div class="text-black flex border-0 border-b border-gray px-2">
+          <div class="w-1/3 flex items-center">
+            <label for="forms-Registertel">เบอร์โทรศัพท์</label>
+          </div>
+          <div class="w-2/3 flex-grow">
+            <input class="w-full border-0  bg-white py-4 focus:ring-0 focus:border-gray text-right" type="text" placeholder="" id="forms-Registertel"/>
+          </div>
+        </div>
+         <div class="text-black flex border-0 border-b border-gray px-2">
+          <div class="w-1/3 flex items-center">
+            <label for="forms-RegisterPassword">รหัสผ่าน</label>
+          </div>
+          <div class="w-2/3 flex-grow">
+            <input class="w-full border-0  bg-white py-4 focus:ring-0 focus:border-gray text-right" type="password" placeholder="" id="forms-RegisterPassword"/>
+          </div>
+        </div>
+         <div class="text-black flex border-0 border-b border-gray px-2">
+          <div class="w-1/3 flex items-center">
+            <label for="forms-RegisterConfirm">ยืนยันรหัสผ่าน</label>
+          </div>
+          <div class="w-2/3 flex-grow">
+            <input class="w-full border-0  bg-white py-4 focus:ring-0 focus:border-gray text-right" type="password" placeholder="" id="forms-RegisterConfirm"/>
+          </div>
+        </div>
+        
       </div>
-      <div class="mt-[250px] pb-4">
+      <div class="sticky top-[100vh] pb-4">
         <nuxt-link :to="'/'">
         <div
           class="flex w-full bg-blue border-none text-white text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]"
@@ -51,7 +67,7 @@
           </div>
         </div>
         <div
-          class="flex w-full border border-gray text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]"
+          class="flex w-full border border-gray bg-white text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]"
         >
           <div class="text-[16px] flex justify-center items-center">
             <img src="icons/google.svg" />

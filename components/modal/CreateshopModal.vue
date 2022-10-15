@@ -1,23 +1,25 @@
 <template>
-  <div class="modal-overlay">
+  <transition name="modal-fade">
+  <div class="modal-overlay" @click="$emit('close-modal')">
     <div class="modal">
       <div
-        class="flex w-full bg-white border-b border-gray text-center justify-center items-center h-[60px] rounded-[6px]"
+        class="flex w-full bg-white border-b border-gray text-center justify-center items-center h-[60px] rounded-[6px] mb-2"
       >
         <span class="text-[16px]">บุคคลธรรมดา</span>
       </div>
       <div
-        class="flex w-full bg-white border-0 border-gray text-center justify-center items-center h-[60px]  mb-[10px] rounded-[6px]"
+        class="flex w-full bg-white border-0 border-gray text-center justify-center items-center h-[60px]  mb-6 rounded-[6px]"
       >
         <span class="text-[16px]">นิติบุคคล</span>
       </div>
        <div
-        class="flex w-full bg-white text-red border-0 border-gray text-center justify-center items-center h-[60px] mb-[10px] rounded-[6px]"
-      >
+        class="flex w-full bg-white text-red border-0 border-gray text-center justify-center items-center h-[60px] rounded-[6px]"
+      @click="$emit('close-modal')">
         <span class="text-[16px]">ยกเลิก</span>
       </div>
     </div>
   </div>
+  </transition>
 </template>
 <script>
 import { defineComponent, ref } from "vue";
@@ -39,13 +41,24 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   background-color: #000000da;
+  z-index: 10;
 }
 
 .modal {
   text-align: center;
   width: 100%;
   position: absolute;
-  bottom: 10%;
+  bottom: 20%;
   padding: 0 10px;
+  z-index: 20;
+}
+
+.modal-fade-enter,
+.modal-fade-leave-to {
+  opacity: 0;
+}
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: opacity 0.5s ease;
 }
 </style>
