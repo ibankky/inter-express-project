@@ -14,6 +14,25 @@
               <span class="text-[16px]">สร้างร้าน</span>
           </button>
         </div>
+        <div class="flex items-center justify-center w-full mb-12 mt-12">
+  
+  <label for="toggleB" class="flex items-center cursor-pointer">
+    <!-- toggle -->
+    <div class="relative">
+      <!-- input -->
+      <input type="checkbox" id="toggleB" class="sr-only">
+      <!-- line -->
+      <div class="block bg-gray w-14 h-8 rounded-full"></div>
+      <!-- dot -->
+      <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
+    </div>
+    <!-- label -->
+    <div class="ml-3 text-gray-700 font-medium">
+      Toggle Me!
+    </div>
+  </label>
+
+</div>
      </div>  
     <share-mobile-menu></share-mobile-menu>
     <createshop-modal v-if="showModal" @close-modal="showModal = false"></createshop-modal>
@@ -40,3 +59,10 @@ import CreateshopModal from '../components/modal/CreateshopModal.vue'
     }
   })
 </script>
+<style lang="css" scoped>
+/* Toggle B */
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #48bb78;
+}
+</style>
