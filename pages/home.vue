@@ -37,18 +37,7 @@
         <div class="block p-4 rounded-lg shadow-lg bg-white w-full">
           <h5 class="text-gray mb-4">ยอดขายรายสัปดาห์</h5>
           <div class="flex justify-center items-center">
-            <div class="w-1/4">
-              <p class="text-small">ที่ต้องเรียกเก็บ</p>
-            </div>
-            <div class="w-1/4">
-              <p class="text-small">ที่ต้องเรียกเก็บ</p>
-            </div>
-            <div class="w-1/4">
-              <p class="text-small">ที่ต้องเรียกเก็บ</p>
-            </div>
-            <div class="w-1/4">
-              <p class="text-small">ที่ต้องเรียกเก็บ</p>
-            </div>
+            <GraphLine />
           </div>
         </div>
       </div>
@@ -123,8 +112,9 @@
 <script>
 import { defineComponent, useContext } from "vue";
 import CreateshopModal from "../components/modal/CreateshopModal.vue";
+import GraphLine from "../components/GraphLine.vue";
 export default defineComponent({
-  components: { CreateshopModal },
+  components: { CreateshopModal,GraphLine },
   setup() {
   },
 });
