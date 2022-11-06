@@ -2,7 +2,7 @@
   <transition name="modal-fade">
   <div class="modal-overlay" @click="$emit('close-modal')">
     <div class="modal" @click.stop>
-      <nuxt-link :to="'/new-shop'">
+      <nuxt-link :to="'/new-shop/form'">
           
       <div
         class="flex w-full bg-white border-b border-gray text-center justify-center items-center h-[60px] rounded-[6px] mb-2"
@@ -10,7 +10,7 @@
         <span class="text-[16px]">บุคคลธรรมดา</span>
       </div>
       </nuxt-link>
-      <nuxt-link :to="'/new-shop'">
+      <nuxt-link :to="'/new-shop/form'">
       <div
         class="flex w-full bg-white border-0 border-gray text-center justify-center items-center h-[60px]  mb-6 rounded-[6px]"
       >

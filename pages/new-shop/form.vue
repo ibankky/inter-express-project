@@ -1,63 +1,45 @@
 <template>
-  <div class="bg-gray-2 bg-opacity-20 h-full w-full relative pb-[20px]">
-    <HeaderWithStepper :title="'สร้างร้านค้า'"></HeaderWithStepper>
-    <div class="container bg-light-blue h-[200px] mb-10 relative">
-      <div
-        class="absolute bottom-[-15px] left-[15px] w-[100px] h-[100px] bg-white rounded-[6px]"
-      >
-        <div class="flex h-full text-center justify-center items-center">
-          <label for="file-upload" class="custom-file-upload">
-            <img src="/icons/img-icon.png" alt="" class="w-[32px]" />
-          </label>
-          <input id="file-upload" type="file" />
-        </div>
-      </div>
-    </div>
-    <div class="container px-[15px] mt-[20px] pb-[100px]">
-      <div class="bg-white rounded-[6px] px-2 py-2">
+  <div  class="bg-gray-2 bg-opacity-20 h-full w-full relative pb-[20px]">
+     <HeaderWithStepper :title="'สร้างร้านค้า'"></HeaderWithStepper>
+     <div class="container px-[15px] mt-[20px] min-h-[90vh] ">
+      <div class="bg-white rounded-[6px] px-2 py-2 ">
         <input
           type="text"
-          placeholder="ชื่อร้าน"
+          placeholder="ข้อมูลทั่วไป"
           class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
         />
         <input
           type="text"
-          placeholder="ประเภทสินค้าที่ขาย"
+          placeholder="รหัสลูกค้า"
           class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
         />
         <input
           type="text"
-          placeholder="เบอร์โทรศัพท์ร้าน"
+          placeholder="คำนำหน้า"
           class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
         />
         <input
           type="text"
-          placeholder="อีเมล"
+          placeholder="ชื่อ"
           class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
         />
         <input
           type="text"
-          placeholder="Line ID"
+          placeholder="นามสกุล"
           class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
         />
-
-        <textarea
+        <input
+          type="text"
+          placeholder="เลขประจำตัวประชาชน/พาสปอร์ต"
+          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
+        />
+         <textarea
           type="text"
           rows="4"
-          placeholder="รายละเอียดร้าน"
+          placeholder="ที่อยู่ตามบัตรประชาชน"
           class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
         />
-        <textarea
-          type="text"
-          rows="4"
-          placeholder="ที่อยู่ร้าน"
-          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
-        />
-        <p class="pl-4 mt-4">ตำแหน่งร้าน</p>
-        <div class="w-full h-[200px] bg-gray"></div>
-      </div>
-       <div class="bg-white rounded-[6px] px-2 py-2 mt-4">
-          <p class="pl-4 my-2">ภาพหน้าร้าน</p>
+        <p class="pl-4 my-2">ภาพหน้าบัตรประชน/พาสปอร์ต</p>
           <div class="px-4 py-4">
           <label for="file-upload" class="custom-file-upload">
             <div class="w-[100px] h-[100px] border border-dashed border-blue flex items-center justify-center rounded-[6px]">
@@ -70,12 +52,13 @@
           </label>
           <input id="file-upload" type="file" />
           </div>
-       </div>
+      </div>
+       
     </div>
-     <div class="fixed bottom-0 w-full px-[15px]">
+    <div class="fixed bottom-0 w-full px-[15px] bg-white">
         <div
           class="flex w-full bg-blue border-none text-white text-center justify-center items-center h-[48px] mb-[20px] rounded-[6px]"
-       
+        @click="submitNewShop()"
         >
           <span class="text-[16px]">ถัดไป</span>
         </div>
@@ -83,10 +66,15 @@
   </div>
 </template>
 <script>
-import { defineComponent, useContext } from "vue";
-export default defineComponent({
-  setup() {
-    return {};
-  },
-});
+  import { defineComponent, useContext } from 'vue'
+  export default defineComponent({
+    setup() {
+        function submitNewShop(){
+         this.$router.push('/new-shop/detail')
+      }
+      return {
+          submitNewShop
+      }
+    }
+  })
 </script>

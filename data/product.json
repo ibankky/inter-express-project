@@ -1,46 +1,46 @@
 {
-    "products": {
-        "items": [
-            {
-                "name": "Apple Fuji Pack 6",
-                "sku": "",
-                "url": "/",
-                "price": "199",
-                "count": "40",
-                "image": {
-                    "url": "https://picsum.photos/200"
-                }
-            },
-            {
-                "name": "Strawberry Pack 12",
-                "sku": "",
-                "url": "/",
-                "price": "140",
-                "count": "32",
-                "image": {
-                    "url": "https://picsum.photos/200"
-                }
-            },
-            {
-                "name": "Lorem ipsum dolor consecteturism adipiscing",
-                "sku": "",
-                "url": "/",
-                "price": "252",
-                "count": "19",
-                "image": {
-                    "url": "https://picsum.photos/200"
-                }
-            },
-            {
-                "name": "Lorem ipsum dolor consecteturism adipiscing",
-                "sku": "",
-                "url": "/",
-                "price": "142",
-                "count": "16",
-                "image": {
-                    "url": "https://picsum.photos/200"
-                }
-            }
-        ]
-    }
+  "products": {
+    "items": [
+      {
+        "name": "Apple Fuji Pack 6",
+        "sku": "",
+        "url": "/",
+        "price": "199",
+        "count": "40",
+        "image": {
+          "url": "https://picsum.photos/200"
+        }
+      },
+      {
+        "name": "Strawberry Pack 12",
+        "sku": "",
+        "url": "/",
+        "price": "140",
+        "count": "32",
+        "image": {
+          "url": "https://picsum.photos/200"
+        }
+      },
+      {
+        "name": "Lorem ipsum dolor consecteturism adipiscing",
+        "sku": "",
+        "url": "/",
+        "price": "252",
+        "count": "19",
+        "image": {
+          "url": "https://picsum.photos/200"
+        }
+      },
+      {
+        "name": "Lorem ipsum dolor consecteturism adipiscing",
+        "sku": "",
+        "url": "/",
+        "price": "142",
+        "count": "16",
+        "image": {
+          "url": "https://picsum.photos/200"
+        }
+      }
+    ]
+  }
 }
