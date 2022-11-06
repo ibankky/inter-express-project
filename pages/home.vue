@@ -22,13 +22,13 @@
               <p class="text-small">ที่ต้องเรียกเก็บ</p>
             </div>
             <div class="w-1/4">
-              <p class="text-small">ที่ต้องเรียกเก็บ</p>
+              <p class="text-small">ที่ต้องจัดส่ง</p>
             </div>
             <div class="w-1/4">
-              <p class="text-small">ที่ต้องเรียกเก็บ</p>
+              <p class="text-small">คืนเงิน/คืนสินค้า</p>
             </div>
             <div class="w-1/4">
-              <p class="text-small">ที่ต้องเรียกเก็บ</p>
+              <p class="text-small">Complete</p>
             </div>
           </div>
         </div>
@@ -36,75 +36,37 @@
       <div class="flex justify-center mt-4">
         <div class="block p-4 rounded-lg shadow-lg bg-white w-full">
           <h5 class="text-gray mb-4">ยอดขายรายสัปดาห์</h5>
-          <div class="flex justify-center items-center">
+          <div class="flex justify-center items-center px-2">
             <GraphLine />
           </div>
         </div>
       </div>
        <h5 class="mb-4 mt-4">สินค้าขายดีประจำสัปดาห์</h5>
-       <div class="flex justify-center mt-4">
-           <div class="block p-4 rounded-lg shadow-lg bg-white w-full">
+       <div
+                v-for="(product, index) in Products"
+                :key="index"
+                class="flex justify-center mt-4"
+              >
+               <div class="block p-4 rounded-lg shadow-lg bg-white w-full">
                 <div class="flex items-top">
                     <div class="w-1/12">
-                        1.
+                       {{index + 1}}
                     </div>
                     <div class="w-3/12">
-                         <img src="/images/item-demo.png" alt="" class="w-full" />
+                         <img :src="product.image.url" alt="" class="w-full rounded-[6px]" />
                     </div>
-                    <div class="8/12 pl-2">
-                       <p> Lorem ipsum dolor consecteturism adipiscing</p>
-                       <p class="text-blue">฿199</p>
+                    <div class="w-8/12 pl-4">
+                       <p class="min-h-[2.5em]"> {{product.name}}</p>
+                       <p class="text-blue">฿ {{product.price}}</p>
                     </div>
                 </div>
                 <div class="flex justify-end">
                     <div class="text-gray text-small-2">
-                        ขายแล้ว 85
+                        ขายแล้ว {{product.count}}
                     </div>
                 </div>    
            </div>
-       </div>    
-       <div class="flex justify-center mt-4">
-           <div class="block p-4 rounded-lg shadow-lg bg-white w-full">
-                <div class="flex items-top">
-                    <div class="w-1/12">
-                        2.
-                    </div>
-                    <div class="w-3/12">
-                         <img src="/images/item-demo.png" alt="" class="w-full" />
-                    </div>
-                    <div class="8/12 pl-2">
-                       <p> Lorem ipsum dolor consecteturism adipiscing</p>
-                       <p class="text-blue">฿199</p>
-                    </div>
-                </div>
-                <div class="flex justify-end">
-                    <div class="text-gray text-small-2">
-                        ขายแล้ว 85
-                    </div>
-                </div>    
-           </div>
-       </div> 
-       <div class="flex justify-center mt-4">
-           <div class="block p-4 rounded-lg shadow-lg bg-white w-full">
-                <div class="flex items-top">
-                    <div class="w-1/12">
-                        3.
-                    </div>
-                    <div class="w-3/12">
-                         <img src="/images/item-demo.png" alt="" class="w-full" />
-                    </div>
-                    <div class="8/12 pl-2">
-                       <p> Lorem ipsum dolor consecteturism adipiscing</p>
-                       <p class="text-blue">฿199</p>
-                    </div>
-                </div>
-                <div class="flex justify-end">
-                    <div class="text-gray text-small-2">
-                        ขายแล้ว 85
-                    </div>
-                </div>    
-           </div>
-       </div>    
+        </div>      
     </div>
     <share-mobile-menu></share-mobile-menu>
   </div>
@@ -113,9 +75,15 @@
 import { defineComponent, useContext } from "vue";
 import CreateshopModal from "../components/modal/CreateshopModal.vue";
 import GraphLine from "../components/GraphLine.vue";
+import ProductData from "~/data/product.json";
 export default defineComponent({
   components: { CreateshopModal,GraphLine },
   setup() {
+    const Products = ProductData.products.items
+    console.log(Products)
+    return {
+        Products
+    };
   },
 });
 </script>
