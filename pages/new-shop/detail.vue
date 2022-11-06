@@ -20,11 +20,12 @@
           placeholder="ชื่อร้าน"
           class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
         />
-        <input
-          type="text"
-          placeholder="ประเภทสินค้าที่ขาย"
-          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
-        />
+        <nuxt-link :to="'/new-shop/category'">
+        <div class="flex w-100 border-0 border-b border-gray bg-white py-4 px-3">
+          <div class="w-1/2 text-[14px]">ประเภทสินค้าที่ขาย</div>
+          <div class="w-1/2 text-gray justify-end items-center flex"><span class="mr-4 text-[12px]">กรุณาเลือก</span>  <img src="/icons/next-icons.svg" class="w-[12px]" /></div>
+        </div>
+        </nuxt-link>
         <input
           type="text"
           placeholder="เบอร์โทรศัพท์ร้าน"
@@ -71,11 +72,12 @@
           <input id="file-upload" type="file" />
           </div>
        </div>
+       
     </div>
      <div class="fixed bottom-0 w-full px-[15px]">
         <div
           class="flex w-full bg-blue border-none text-white text-center justify-center items-center h-[48px] mb-[20px] rounded-[6px]"
-       
+        @click="submitShopDetail()"
         >
           <span class="text-[16px]">ถัดไป</span>
         </div>
@@ -86,7 +88,12 @@
 import { defineComponent, useContext } from "vue";
 export default defineComponent({
   setup() {
-    return {};
+    function submitShopDetail(){
+         this.$router.push('/new-shop/billingdetail')
+      }
+    return {
+      submitShopDetail
+    };
   },
 });
 </script>

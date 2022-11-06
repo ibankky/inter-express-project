@@ -20,6 +20,12 @@
             <div class="stepper-item">
             <div class="step-counter">3</div>
             </div>
+            <div class="stepper-item">
+            <div class="step-counter">4</div>
+            </div>
+            <div class="stepper-item">
+            <div class="step-counter">5</div>
+            </div>
         </div>
         </div>
     </div>
@@ -30,6 +36,7 @@ import { defineComponent, ref } from "vue";
 export default defineComponent({
   props: {
     title: String,
+    step:String
   },
   setup() {
     function goToPrev() {

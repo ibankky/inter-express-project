@@ -6,3 +6,7 @@ body {
 input[type="file"] {
     display: none;
 }
+.form-control::placeholder{
+    color: #000000;
+    font-size: 14px;
+}
