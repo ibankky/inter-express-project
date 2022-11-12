@@ -65,7 +65,8 @@
     <div class="fixed bottom-0 w-full px-[15px]">
       <div
         class="flex w-full bg-blue border-none text-white text-center justify-center items-center h-[48px] mb-[20px] rounded-[6px]"
-      >
+      @click="submitNewShop()"
+     >
         <span class="text-[16px]">สร้างร้าน</span>
       </div>
     </div>
@@ -75,6 +76,12 @@
 import { defineComponent, useContext } from "vue";
 export default defineComponent({
   setup() {
+     function submitNewShop(){
+         this.$router.push('/')
+      }
+      return {
+          submitNewShop
+      }
     return {};
   },
 });

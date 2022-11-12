@@ -3,7 +3,7 @@
      <HeaderDefault :title="'เพิ่มสินค้า'"></HeaderDefault>
      <div class="container px-[15px] mt-[20px] ">
       <div class="bg-white rounded-[6px] px-2 py-2 mb-4">
-          <p class="pl-4 my-2">ภาพสินค้า</p>
+          <p class="pl-4 my-2 text-title">ภาพสินค้า</p>
           
           <div class="px-4 pt-4 ">
            <p class="my-2 mb-2">ภาพปก(0/5)</p> 
@@ -35,7 +35,7 @@
           </div>
       </div>       
       <div class="bg-white rounded-[6px] px-2 py-2">
-         <p class="pl-4 my-2">ข้อมูลสินค้า </p>  
+         <p class="pl-4 my-2 text-title">ข้อมูลสินค้า </p>  
         <input
           type="text"
           placeholder="ชื่อสินค้า"
@@ -70,10 +70,47 @@
         />
         
       </div>
+       <div class="bg-white rounded-[6px] px-2 py-2 mt-4">
+         <p class="pl-4 my-2 text-title">ข้อมูลการจัดส่ง </p>  
+        <nuxt-link :to="'/product/add'">
+          <div
+            class="flex w-100 border-0 border-b border-gray bg-white py-4 px-3"
+          >
+            <div class="w-1/2 text-[14px]">Service ขนส่ง</div>
+            <div class="w-1/2 text-gray justify-end items-center flex">
+              <span class="mr-4 text-[12px]">กรุณาเลือก</span>
+              <img src="/icons/next-icons.svg" class="w-[12px]" />
+            </div>
+          </div>
+        </nuxt-link>
+        <nuxt-link :to="'/product/add'">
+          <div
+            class="flex w-100 border-0 border-b border-gray bg-white py-4 px-3"
+          >
+            <div class="w-1/2 text-[14px]">ค่าขนส่งที่คิดโดยบริษัทขนส่ง</div>
+            <div class="w-1/2 text-gray justify-end items-center flex">
+              <span class="mr-4 text-[12px]">กรุณาเลือก</span>
+              <img src="/icons/next-icons.svg" class="w-[12px]" />
+            </div>
+          </div>
+        </nuxt-link>
+          <nuxt-link :to="'/product/add'">
+          <div
+            class="flex w-100 border-0 border-b border-gray bg-white py-4 px-3"
+          >
+            <div class="w-1/2 text-[14px]">ผู้ขายกำหนดราคาขนส่งเอง</div>
+            <div class="w-1/2 text-gray justify-end items-center flex">
+              <span class="mr-4 text-[12px]">กรุณาเลือก</span>
+              <img src="/icons/next-icons.svg" class="w-[12px]" />
+            </div>
+          </div>
+        </nuxt-link>
+        
+      </div>
        <div
           class="flex w-full bg-blue border-none text-white text-center justify-center items-center h-[48px] mb-[20px] rounded-[6px] mt-[100px]"
         >
-          <span class="text-[16px]">ถัดไป</span>
+          <span class="text-[16px]">ลงขาย</span>
         </div>
     </div>
   </div>

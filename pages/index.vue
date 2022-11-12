@@ -16,19 +16,34 @@
     <div class="container bg-gray-2 bg-opacity-20 py-10 h-full px-[15px] mb-[70px]">
       <div class="flex justify-center">
         <div class="block p-4 rounded-lg shadow-lg bg-white w-full">
-          <h5 class="text-gray mb-4">สถานะคำสั่งซื้อ</h5>
-          <div class="flex justify-center items-center">
-            <div class="w-1/4">
-              <p class="text-small">ที่ต้องเรียกเก็บ</p>
+          <div class="flex justify-center items-center mb-4">
+            <div class="w-1/2 items-center">
+              <h5 class="text-gray mb-0">สถานะคำสั่งซื้อ</h5>
             </div>
-            <div class="w-1/4">
+            <div class="w-1/2 flex text-gray justify-end">
+
+              <span class="mr-2 text-[12px]">ทั้งหมด</span>
+              <img src="/icons/next-icons.svg" class="w-[12px] h-[16px]" />
+            </div>
+            
+          </div>
+          
+          <div class="flex justify-center items-center">
+            <div class="w-1/4 text-center">
+              <img src="/images/open-box.png" class="w-[30px] mx-auto">
               <p class="text-small">ที่ต้องจัดส่ง</p>
             </div>
-            <div class="w-1/4">
-              <p class="text-small">คืนเงิน/คืนสินค้า</p>
+            <div class="w-1/4 text-center">
+               <img src="/images/cash-machine.png" class="w-[30px] mx-auto">
+              <p class="text-small">ที่ต้องชำระค่าส่ง</p>
             </div>
-            <div class="w-1/4">
-              <p class="text-small">Complete</p>
+            <div class="w-1/4 text-center">
+               <img src="/images/open-box.png" class="w-[30px] mx-auto">
+              <p class="text-small">รอจัดส่ง</p>
+            </div>
+            <div class="w-1/4 text-center">
+               <img src="/images/open-box.png" class="w-[30px] mx-auto">
+              <p class="text-small">กำลังจัดส่ง</p>
             </div>
           </div>
         </div>

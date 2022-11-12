@@ -11,9 +11,9 @@
       <div class="flex bg-white mb-4 p-4 rounded-[10px]" v-for="box in boxs" :key="box.index">
       <div class="flex w-full">
           <div class="w-1/6">
-
+            <img src="/images/icon_box.png">
           </div>
-          <div class="w-4/6 ">
+          <div class="w-4/6 pl-2">
               <p>{{ box.name }}</p>
               <p class="text-small text-gray">{{box.detail}}</p>
           </div>

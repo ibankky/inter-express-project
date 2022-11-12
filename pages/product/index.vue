@@ -10,6 +10,7 @@
         </div>
         <div class="flex justify-center w-3/4 mx-auto">
           <button type="button" class="flex w-full bg-blue border-none text-white  text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]"
+            @click="addProduct()"
             >
               <span class="text-[16px]">เพิ่มสินค้า</span>
           </button>
@@ -23,8 +24,13 @@
   import { defineComponent, ref ,useContext } from 'vue'
   export default defineComponent({
     setup() {
-      
-    }
+     function addProduct(){
+         this.$router.push('/product/add')
+      }
+      return {
+          addProduct
+      }
+  },
   })
 </script>
 
