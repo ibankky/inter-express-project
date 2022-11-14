@@ -13,37 +13,24 @@
         </div>
       </div>
     </div>
-    <div class="container bg-gray-2 bg-opacity-20 py-10 h-full px-[15px] mb-[70px]">
+    <div
+      class="container bg-gray-2 bg-opacity-20 py-10 h-full px-[15px] mb-[70px]"
+    >
       <div class="flex justify-center">
         <div class="block p-4 rounded-lg shadow-lg bg-white w-full">
-          <div class="flex justify-center items-center mb-4">
-            <div class="w-1/2 items-center">
-              <h5 class="text-gray mb-0">สถานะคำสั่งซื้อ</h5>
-            </div>
-            <div class="w-1/2 flex text-gray justify-end">
-
-              <span class="mr-2 text-[12px]">ทั้งหมด</span>
-              <img src="/icons/next-icons.svg" class="w-[12px] h-[16px]" />
-            </div>
-            
-          </div>
-          
+          <h5 class="text-gray mb-4">สถานะคำสั่งซื้อ</h5>
           <div class="flex justify-center items-center">
-            <div class="w-1/4 text-center">
-              <img src="/images/open-box.png" class="w-[30px] mx-auto">
+            <div class="w-1/4">
+              <p class="text-small">ที่ต้องเรียกเก็บ</p>
+            </div>
+            <div class="w-1/4">
               <p class="text-small">ที่ต้องจัดส่ง</p>
             </div>
-            <div class="w-1/4 text-center">
-               <img src="/images/cash-machine.png" class="w-[30px] mx-auto">
-              <p class="text-small">ที่ต้องชำระค่าส่ง</p>
+            <div class="w-1/4">
+              <p class="text-small">คืนเงิน/คืนสินค้า</p>
             </div>
-            <div class="w-1/4 text-center">
-               <img src="/images/open-box.png" class="w-[30px] mx-auto">
-              <p class="text-small">รอจัดส่ง</p>
-            </div>
-            <div class="w-1/4 text-center">
-               <img src="/images/open-box.png" class="w-[30px] mx-auto">
-              <p class="text-small">กำลังจัดส่ง</p>
+            <div class="w-1/4">
+              <p class="text-small">Complete</p>
             </div>
           </div>
         </div>
@@ -56,32 +43,36 @@
           </div>
         </div>
       </div>
-       <h5 class="mb-4 mt-4">สินค้าขายดีประจำสัปดาห์</h5>
-       <div
-                v-for="(product, index) in Products"
-                :key="index"
-                class="flex justify-center mt-4"
-              >
-               <div class="block p-4 rounded-lg shadow-lg bg-white w-full">
-                <div class="flex items-top">
-                    <div class="w-1/12">
-                       {{index + 1}}
-                    </div>
-                    <div class="w-3/12">
-                         <img :src="product.image.url" alt="" class="w-full rounded-[6px]" />
-                    </div>
-                    <div class="w-8/12 pl-4">
-                       <p class="min-h-[2.5em]"> {{product.name}}</p>
-                       <p class="text-blue">฿ {{product.price}}</p>
-                    </div>
-                </div>
-                <div class="flex justify-end">
-                    <div class="text-gray text-small-2">
-                        ขายแล้ว {{product.count}}
-                    </div>
-                </div>    
-           </div>
-        </div>      
+      <h5 class="mb-4 mt-4">สินค้าขายดีประจำสัปดาห์</h5>
+      <div
+        v-for="(product, index) in Products"
+        :key="index"
+        class="flex justify-center mt-4"
+      >
+        <div class="block p-4 rounded-lg shadow-lg bg-white w-full">
+          <div class="flex items-top">
+            <div class="w-1/12">
+              {{ index + 1 }}
+            </div>
+            <div class="w-3/12">
+              <img
+                :src="product.image.url"
+                alt=""
+                class="w-full rounded-[6px]"
+              />
+            </div>
+            <div class="w-8/12 pl-4">
+              <p class="min-h-[2.5em]">{{ product.name }}</p>
+              <p class="text-blue">฿ {{ product.price }}</p>
+            </div>
+          </div>
+          <div class="flex justify-end">
+            <div class="text-gray text-small-2">
+              ขายแล้ว {{ product.count }}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <share-mobile-menu></share-mobile-menu>
   </div>
@@ -92,12 +83,11 @@ import CreateshopModal from "../components/modal/CreateshopModal.vue";
 import GraphLine from "../components/GraphLine.vue";
 import ProductData from "~/data/product.json";
 export default defineComponent({
-  components: { CreateshopModal,GraphLine },
+  components: { CreateshopModal, GraphLine },
   setup() {
-    const Products = ProductData.products.items
-    console.log(Products)
+    const Products = ProductData.products.items;
     return {
-        Products
+      Products,
     };
   },
 });

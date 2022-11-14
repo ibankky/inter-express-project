@@ -41,21 +41,23 @@
           placeholder="ชื่อสินค้า"
           class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
         />
-        <input
-          type="text"
-          placeholder="หมวดหมู่สินค้า"
-          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
-        />
+         <nuxt-link :to="'/product/category'">
+        <div class="flex w-100 border-0 border-b border-gray bg-white py-4 px-3">
+          <div class="w-1/2 text-[14px]">หมวดหมู่สินค้า</div>
+          <div class="w-1/2 text-gray justify-end items-center flex"><span class="mr-4 text-[12px]">กรุณาเลือก</span>  <img src="/icons/next-icons.svg" class="w-[12px]" /></div>
+        </div>
+        </nuxt-link>
         <input
           type="text"
           placeholder="ราคา"
           class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
         />
-        <input
-          type="text"
-          placeholder="หน่วย"
-          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
-        />
+        <nuxt-link :to="'/product/form'">
+        <div class="flex w-100 border-0 border-b border-gray bg-white py-4 px-3">
+          <div class="w-1/2 text-[14px]">หน่วย</div>
+          <div class="w-1/2 text-gray justify-end items-center flex"><span class="mr-4 text-[12px]">กรุณาเลือก</span>  <img src="/icons/next-icons.svg" class="w-[12px]" /></div>
+        </div>
+        </nuxt-link>
         <input
           type="text"
           placeholder="คลัง"
@@ -70,39 +72,25 @@
         />
         
       </div>
-      <div class="bg-white rounded-[6px] px-2 py-2">
+      <div class="bg-white rounded-[6px] px-2 py-2 mt-4">
          <p class="pl-4 my-2">ข้อมูลการจัดส่ง </p>  
-        <input
-          type="text"
-          placeholder="Service การจัดส่ง"
-          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
-        />
-        <input
-          type="text"
-          placeholder="ค่าขนส่งที่ติดโดย IEL"
-          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
-        />
+        <nuxt-link :to="'/product/shipping'">
+        <div class="flex w-100 border-0 border-b border-gray bg-white py-4 px-3">
+          <div class="w-1/2 text-[14px]">Service การขนส่ง</div>
+          <div class="w-1/2 text-gray justify-end items-center flex"><span class="mr-4 text-[12px]">กรุณาเลือก</span>  <img src="/icons/next-icons.svg" class="w-[12px]" /></div>
+        </div>
+        </nuxt-link>
+        <nuxt-link :to="'/product/form'">
+        <div class="flex w-100 border-0 border-b border-gray bg-white py-4 px-3">
+          <div class="w-1/2 text-[14px]">ค่าขนส่งที่คิดโดยบริษัทขนส่ง</div>
+          <div class="w-1/2 text-gray justify-end items-center flex"><span class="mr-4 text-[12px]">เช็คค่าขนส่ง</span>  <img src="/icons/next-icons.svg" class="w-[12px]" /></div>
+        </div>
+        </nuxt-link>
         <input
           type="text"
           placeholder="ผู้ขายกำหนดค่าขนส่งเอง"
           class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
         />
-        
-        
-      </div>
-      <div class="bg-white rounded-[6px] px-2 py-2">
-         <p class="pl-4 my-2">คำสั่งพรีออเดอร์ </p>  
-        <input
-          type="text"
-          placeholder="Service การจัดส่ง"
-          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
-        />
-        <input
-          type="text"
-          placeholder="ค่าขนส่งที่ติดโดย IEL"
-          class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
-        />
-      
         
         
       </div>
