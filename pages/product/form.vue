@@ -142,11 +142,11 @@
             </div>
           </div>
         </nuxt-link>
-         <div
-            class="flex w-100 border-0 border-b border-gray bg-white py-4 px-3"
-          >
-            <div class="w-1/2 text-[14px]">ค่าขนส่งที่คิดโดยบริษัทขนส่ง</div>
-            <div class="w-1/2 text-gray justify-end items-center flex">
+        <div
+          class="flex w-100 border-0 border-b border-gray bg-white py-4 px-3"
+        >
+          <div class="w-1/2 text-[14px]">ค่าขนส่งที่คิดโดยบริษัทขนส่ง</div>
+          <div class="w-1/2 text-gray justify-end items-center flex">
             <div class="flex items-center justify-end">
               <label
                 :for="'toggle-shipping'"
@@ -166,7 +166,7 @@
               </label>
             </div>
           </div>
-          </div>
+        </div>
       </div>
       <nuxt-link :to="'/product'">
         <div
