@@ -21,16 +21,16 @@
           <h5 class="text-gray mb-4">สถานะคำสั่งซื้อ</h5>
           <div class="flex justify-center items-center">
             <div class="w-1/4">
-              <p class="text-small">ที่ต้องเรียกเก็บ</p>
+              <p class="text-small text-center">ที่ต้องเรียกเก็บ</p>
             </div>
             <div class="w-1/4">
-              <p class="text-small">ที่ต้องจัดส่ง</p>
+              <p class="text-small text-center">ที่ต้องจัดส่ง</p>
             </div>
             <div class="w-1/4">
-              <p class="text-small">คืนเงิน/คืนสินค้า</p>
+              <p class="text-small text-center">คืนเงิน/คืนสินค้า</p>
             </div>
             <div class="w-1/4">
-              <p class="text-small">Complete</p>
+              <p class="text-small text-center">Complete</p>
             </div>
           </div>
         </div>

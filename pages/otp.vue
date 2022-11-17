@@ -28,9 +28,11 @@
           </div>
       </div>
      <div class="mt-[200px]">
+       <nuxt-link :to="'/'">
         <div class="flex w-full bg-blue border-none text-white  text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]">
             <span class="text-[16px]">ยืนยัน</span>
         </div>
+        </nuxt-link>
      </div>
       
     </div>

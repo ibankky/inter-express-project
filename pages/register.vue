@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-2 bg-opacity-20 h-full w-full relative">
     <HeaderDefault :title="'Register'"></HeaderDefault>
-    <div class="container px-[15px] min-h-[90vh]">
+    <div class="container px-[15px] min-h-[90vh] mt-4">
       <div class="bg-white rounded-[6px] px-2 py-2">
          <div class="text-black flex border-0 border-b border-gray px-2">
           <div class="w-1/3 flex items-center">

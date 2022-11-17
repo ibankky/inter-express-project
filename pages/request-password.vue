@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-2 bg-opacity-20 h-full w-full relative  min-h-screen">
     <HeaderDefault :title="'ขอรหัสผ่านชั่วคราว'"></HeaderDefault>
-    <div class="container px-[15px] min-h-[90vh]">
+    <div class="container px-[15px] min-h-[90vh] mt-4">
       <div class="bg-white">
        <div class="text-black flex border-0 px-2">
           <div class="w-1/3 flex items-center">
@@ -18,9 +18,11 @@
         </div>
       </div>
      <div class="sticky top-[100vh] mb-4">
+       <nuxt-link :to="'/otp'">
         <div class="flex w-full bg-blue border-none text-white  text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]">
             <span class="text-[16px]">ขอรหัสผ่านชั่วคราว</span>
         </div>
+       </nuxt-link>
      </div>
       
     </div>

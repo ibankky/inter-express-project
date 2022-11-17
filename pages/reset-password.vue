@@ -1,9 +1,9 @@
 <template>
   <div class="bg-gray-2 bg-opacity-20 h-full w-full relative  min-h-screen">
     <HeaderDefault :title="'ตั้งค่ารหัสผ่านใหม่'"></HeaderDefault>
-    <div class="container px-[15px] min-h-[90vh]">
+    <div class="container px-[15px] min-h-[90vh] mt-4">
       <div class=" bg-white rounded-[6px] px-2 py-2">
-         <div class="text-black flex border-0 px-2">
+         <div class="text-black flex border-0 border-b border-gray px-2">
           <div class="w-1/3 flex items-center">
             <label for="forms-resetPassword">รหัสผ่านที่ได้รับ</label>
           </div>
@@ -11,7 +11,7 @@
             <input class="w-full border-0  bg-white py-4 focus:ring-0 focus:border-gray text-right" type="text" placeholder="" id="forms-resetPassword"/>
           </div>
         </div>
-        <div class="text-black flex border-0 px-2">
+        <div class="text-black flex border-0 border-b border-gray px-2">
           <div class="w-1/3 flex items-center">
             <label for="forms-resetPasswordNew">รหัสผ่านใหม่</label>
           </div>
@@ -19,7 +19,7 @@
             <input class="w-full border-0  bg-white py-4 focus:ring-0 focus:border-gray text-right" type="text" placeholder="" id="forms-resetPasswordNew"/>
           </div>
         </div>
-        <div class="text-black flex border-0 px-2">
+        <div class="text-black flex border-0 border-b border-gray px-2">
           <div class="w-1/3 flex items-center">
             <label for="forms-resetPasswordConfirm">ยืนยันรหัสผ่านใหม่</label>
           </div>
