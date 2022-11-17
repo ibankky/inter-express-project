@@ -1,4 +1,5 @@
 export default {
+  target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'inter-express',
@@ -38,6 +39,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/composition-api/module',
   ],
+  
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
