@@ -51,7 +51,7 @@
       </div>
        
     </div>
-    <div class="fixed bottom-0 w-full px-[15px] bg-white">
+    <div class="fixed bottom-0 w-full px-[15px]">
         <div
           class="flex w-full bg-blue border-none text-white text-center justify-center items-center h-[48px] mb-[20px] rounded-[6px]"
         @click="submitNewShop()"
