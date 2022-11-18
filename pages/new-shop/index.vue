@@ -3,7 +3,7 @@
     <HeaderDefault :title="'สร้างร้านค้า'"></HeaderDefault>
     <div class="container px-[15px]">
       <div class="flex justify-center w-3/4 mx-auto mt-[150px]">
-        <img src="icons/store.png" class="w-[100px]" />
+        <img src="/icons/store.png" class="w-[100px]" />
       </div>
       <div class="flex my-10 justify-center w-3/4 mx-auto">
         <p class="text-gray text-center">
