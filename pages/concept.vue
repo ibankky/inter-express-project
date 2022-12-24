@@ -1,29 +1,34 @@
 <template>
-  <line-chart :chart-data="chartData" />
+  <div>
+    <div>
+      <button type="button" class="btn btn-primary" @click="loadUsers">
+        Fetch users
+      </button>
+    </div>
+    <div>
+      <pre>{{ users }}</pre>
+    </div>
+  </div>
 </template>
 
 <script>
-import { Bar } from 'vue-chartjs'
-import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
+import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { userApi } from '@/api/user'
 
-ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
+export default defineComponent({
+  setup() {
+    const { fetchUsers } = userApi()
+    const users = ref([])
 
-export default {
-  name: 'BarChart',
-  components: { Bar },
-  data() {
-    return {
-      chartData: {
-        labels: [ 'January', 'February', 'March'],
-        datasets: [
-          {
-            label: 'Data One',
-            backgroundColor: '#f87979',
-            data: [40, 20, 12]
-          }
-        ]
-      }
+    const loadUsers = async () => {
+      const res = await fetchUsers()
+      users.value = res.data
     }
-  }
-}
+
+    return {
+      users,
+      loadUsers,
+    }
+  },
+})
 </script>

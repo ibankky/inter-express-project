@@ -52,8 +52,19 @@ export default {
 
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
-    //baseURL: process.env.API_URL,
-    baseURL: 'https://reqres.in/api/', //example for POC axixos
+    //baseURL: process.env.API_BASE_URL,
+    //baseURL: 'http://13.212.253.139:8081/',
+    //proxyHeaders: false,
+   // credentials: false
+   proxy: true
+  },
+  proxy: {
+    // Simple proxy
+    "/api/": {
+      target: "http://13.212.253.139:8081/",
+      pathRewrite: { "^/api/": "" },
+      changeOrigin: true
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
