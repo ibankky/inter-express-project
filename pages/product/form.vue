@@ -179,10 +179,30 @@
   </div>
 </template>
 <script>
-import { defineComponent, useContext } from "vue";
+import { defineComponent, reactive } from "@nuxtjs/composition-api";;
 export default defineComponent({
   setup() {
-    return {};
+    const formData = reactive({
+      name: '',
+      categoty: '',
+      category_id : '',
+      price:'',
+      unit:'',
+      description:'',
+      status: '',
+      service: '',
+      temperature: '',
+      box : '',
+      shipping_price : '',
+
+    })
+     function onSubmitProduct() {
+       console.log('onsubmit product')
+       console.log(formData)
+     }
+    return {
+      onSubmitProduct
+    };
   },
 });
 </script>

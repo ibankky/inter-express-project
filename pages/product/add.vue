@@ -21,8 +21,9 @@
   </div>
 </template>
 <script>
-  import { defineComponent, ref ,useContext } from 'vue'
+  import { defineComponent, computed , ref ,useContext } from 'vue'
   export default defineComponent({
+    
     setup() {
      function addProduct(){
          this.$router.push('/product/form')

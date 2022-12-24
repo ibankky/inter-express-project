@@ -78,7 +78,7 @@
   </div>
 </template>
 <script>
-import { defineComponent, useContext } from "vue";
+import { defineComponent, useContext , useStore } from "@nuxtjs/composition-api";
 import CreateshopModal from "../components/modal/CreateshopModal.vue";
 import GraphLine from "../components/GraphLine.vue";
 import ProductData from "~/data/product.json";

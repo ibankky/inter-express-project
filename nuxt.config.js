@@ -1,4 +1,7 @@
 export default {
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
+  },
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -27,7 +30,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/vue-awesome-swiper.js', ssr: false },
-    {src: '~/plugins/chart.js', mode: 'client'}
+    {src: '~/plugins/chart.js', mode: 'client'},
+    {src:'@/plugins/api.js'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -43,9 +47,20 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
   ],
+
+  axios: {
+    // See https://github.com/nuxt-community/axios-module#options
+    //baseURL: process.env.API_URL,
+    baseURL: 'https://reqres.in/api/', //example for POC axixos
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  publicRuntimeConfig: {
+    apiurl: process.env.API_BASE_URL,
+    customertoken:process.env.CUSTOMER_TOKEN
   }
 }
