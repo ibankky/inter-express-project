@@ -11,8 +11,14 @@
           <div class="flex items-top">
             <div class="w-3/12">
               <img
-                :src="product.image.url"
+                v-if="product.image != null"
+                :src="product.image"
                 alt=""
+                class="w-full rounded-[6px]"
+              />
+              <img
+                v-else
+                src="https://via.placeholder.com/150"
                 class="w-full rounded-[6px]"
               />
             </div>
@@ -22,7 +28,9 @@
             </div>
           </div>
           <div class="flex mt-4 pb-2 border-b border-gray-4">
-            <div class="w-1/3 text-gray text-small-2">ค่าจัดส่ง ฿50</div>
+            <div class="w-1/3 text-gray text-small-2">
+              ค่าจัดส่ง ฿{{ product.shipping_price }}
+            </div>
             <div class="w-1/3 text-gray text-small-2 text-center">คลัง 75</div>
             <div class="w-1/3 text-gray text-small-2 text-right">
               ขายแล้ว {{ product.count }}
@@ -39,6 +47,9 @@
                   type="checkbox"
                   :id="'toggle-' + index"
                   class="sr-only"
+                   v-model="product.status"
+                    true-value=1
+                     false-value=0
                 />
                 <div class="bg-check block w-14 h-8 rounded-full"></div>
                 <div
@@ -49,15 +60,14 @@
           </div>
         </div>
       </div>
-      <div>
+      <div></div>
     </div>
-    </div>
-    <nuxt-link :to="'/product/add'">
-    <div
-      class="fixed bottom-[15%] right-[20px] w-[60px] h-[60px] bg-blue flex items-center rounded-full"
-    >
-      <img src="/icons/plus-icon-white.svg" alt="" class="w-[24px] mx-auto" />
-    </div>
+    <nuxt-link :to="'/product/form'">
+      <div
+        class="fixed bottom-[15%] right-[20px] w-[60px] h-[60px] bg-blue flex items-center rounded-full"
+      >
+        <img src="/icons/plus-icon-white.svg" alt="" class="w-[24px] mx-auto" />
+      </div>
     </nuxt-link>
     <share-mobile-menu></share-mobile-menu>
   </div>
@@ -65,24 +75,23 @@
 <script>
 import { defineComponent, onMounted, ref, useContext } from "vue";
 import ProductData from "~/data/product.json";
-import { productApi } from '@/api/product'
+import { productApi } from "@/api/product";
 export default defineComponent({
   setup() {
     onMounted(() => {
-     loadProducts()
-})
-    const Products = ProductData.products.items;
-    const { fetchProducts ,  fetchProduct } = productApi()
-    
+      loadProducts();
+    });
+    const Products = ref([]);
+    const { fetchProducts, fetchProduct } = productApi();
+
     function addProduct() {
       this.$router.push("/product/add");
     }
-    
+
     const loadProducts = async () => {
-      console.log('load product')
-      const res = await fetchProducts()
-      console.log(res)
-    }
+      const res = await fetchProducts();
+      Products.value = res.data;
+    };
 
     return {
       Products,

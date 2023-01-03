@@ -49,6 +49,7 @@
       <div class="bg-white rounded-[6px] px-2 py-2">
         <p class="pl-4 my-2">ข้อมูลสินค้า</p>
         <input
+          v-model="formData.name"
           type="text"
           placeholder="ชื่อสินค้า"
           class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
@@ -65,7 +66,10 @@
           </div>
         </nuxt-link>
         <input
-          type="text"
+          v-model="formData.price"
+          type="number"
+          min="0"
+          step="1"
           placeholder="ราคา"
           class="form-control w-full border-0 border-b border-gray bg-white py-4 focus:ring-0 focus:border-gray"
         />
@@ -87,6 +91,7 @@
         />
 
         <textarea
+          v-model="formData.description"
           type="text"
           rows="4"
           placeholder="รายละเอียดสินค้า"
@@ -107,6 +112,9 @@
                     type="checkbox"
                     :id="'toggle-status'"
                     class="sr-only"
+                    v-model="formData.status"
+                    true-value=1
+                     false-value=0
                   />
                   <div class="bg-check block w-14 h-8 rounded-full"></div>
                   <div
@@ -145,7 +153,7 @@
         <div
           class="flex w-100 border-0 border-b border-gray bg-white py-4 px-3"
         >
-          <div class="w-1/2 text-[14px]">ค่าขนส่งที่คิดโดยบริษัทขนส่ง</div>
+          <div class="w-1/2 text-[14px]">ผู้ขายคิดค่าขนส่งเอง</div>
           <div class="w-1/2 text-gray justify-end items-center flex">
             <div class="flex items-center justify-end">
               <label
@@ -168,40 +176,73 @@
           </div>
         </div>
       </div>
-      <nuxt-link :to="'/product'">
-        <div
-          class="flex w-full bg-blue border-none text-white text-center justify-center items-center h-[48px] mb-[20px] rounded-[6px] mt-[100px]"
-        >
-          <span class="text-[16px]">ถัดไป</span>
-        </div>
-      </nuxt-link>
+      <div v-if="showError">
+        <p class="text-red mt-4">กรุณากรอกข้อมูลให้ครบถ้วน</p>
+      </div>
+      <div
+        class="flex w-full bg-blue border-none text-white text-center justify-center items-center h-[48px] mb-[20px] rounded-[6px] mt-[100px]"
+        @click="onSubmitProduct()"
+      >
+        <span class="text-[16px]">ลงขาย</span>
+      </div>
     </div>
   </div>
 </template>
 <script>
-import { defineComponent, reactive } from "@nuxtjs/composition-api";;
+import {
+  defineComponent,
+  reactive,
+  ref,
+  useRoute,
+  useRouter,
+  computed
+} from "@nuxtjs/composition-api";
+import { productApi } from "@/api/product";
 export default defineComponent({
   setup() {
+    const { addProduct, fetchProduct } = productApi();
+    const router = useRouter();
+    const showError = ref(false);
     const formData = reactive({
-      name: '',
-      categoty: '',
-      category_id : '',
-      price:'',
-      unit:'',
-      description:'',
-      status: '',
-      service: '',
-      temperature: '',
-      box : '',
-      shipping_price : '',
-
+      name: "",
+      category_id: "1", // Fixed before check  ***Type String
+      price: 60,
+      unit: 1, // Fixed before check
+      description: "",
+      status: 1, // fixed 1 For active
+      service: "",
+      temperature: "",
+      box: "",
+      shipping_price: 50,
+      self_shipping: 0, // 0 For not set / 1 For set Active
+      self_shipping_price: 0,
+      store_id: "",
+      tumbnail_image: [],
+      image: [],
+    });
+    const productPrice = computed(() => {
+      return parseInt(formData.price)
     })
-     function onSubmitProduct() {
-       console.log('onsubmit product')
-       console.log(formData)
-     }
+    const onSubmitProduct = async () => {
+      // Validate Form example
+      if (!formData.name || !formData.price) {
+        console.log("error");
+        showError.value = true;
+      } else {
+        const res = await addProduct({ formData });
+        if (res.code === "success") {
+          router.push({
+            name: "product",
+          });
+        }
+      }
+    };
     return {
-      onSubmitProduct
+      formData,
+      showError,
+
+      onSubmitProduct,
+      addProduct,
     };
   },
 });

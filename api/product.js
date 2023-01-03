@@ -11,20 +11,24 @@ export const productApi = () => {
   }
 
   const fetchProduct = async () => {
-    const res = await $api.get('operation/product/v1/products/639c9b15436564adec408473')
+    const res = await $api.get('/api/operation/product/v1/products/639c9b15436564adec408473')
     console.log('fetch product')
     console.log(res)
     return res
   }
-  const addProduct = async () => {
-    const res = await $api.get('operation/product/v1/products')
-    console.log('fetch product')
-    console.log(res)
+  const addProduct = async (payload) => {
+    console.log(payload.formData)
+    const  data = payload.formData
+    console.log(data)
+    const res = await $api.put('/api/operation/product/v1/products' , data )
+    //console.log('fetch product')
+    //console.log(res)
     return res
   }
 
   return {
     fetchProducts,
-    fetchProduct
+    fetchProduct,
+    addProduct
   }
 }
