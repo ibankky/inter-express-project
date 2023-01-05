@@ -76,7 +76,7 @@
           <div
             class="flex w-100 border-0 border-b border-gray bg-white py-4 px-3"
           >
-            <div class="w-1/2 text-[14px]">หน่วย</div>
+            <div class="w-1/2 text-[14px]">หน่วย</div> 
             <div class="w-1/2 text-gray justify-end items-center flex">
               <span class="mr-4 text-[12px]">กรุณาเลือก</span>
               <img src="/icons/next-icons.svg" class="w-[12px]" />
