@@ -66,7 +66,6 @@
           </div>
         </nuxt-link>
         <input
-          v-model="formData.price"
           type="number"
           min="0"
           step="1"
@@ -220,9 +219,7 @@ export default defineComponent({
       tumbnail_image: [],
       image: [],
     });
-    const productPrice = computed(() => {
-      return parseInt(formData.price)
-    })
+
     const onSubmitProduct = async () => {
       // Validate Form example
       if (!formData.name || !formData.price) {
