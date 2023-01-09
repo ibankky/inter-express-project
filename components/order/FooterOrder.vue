@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed bottom-0 w-full bg-white shadow-lg py-2">
+  <div class="fixed bottom-0 w-full bg-white py-2 shadow-[0_-3px_5px_0_rgba(0,0,0,0.3)]">
     <div class="flex px-2">
       <div class="w-2/6 flex item-center justify-center">
           <label class="inline-flex items-center">
