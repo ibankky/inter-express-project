@@ -26,7 +26,9 @@ module.exports = {
           'gray-3' : '#777777',
           'gray-4' : '#ededed',
           fb: '#3B5A9B',
-          linecolor: '#00B100'
+          linecolor: '#00B100',
+          yellow: '#fede00',
+          'light-yellow': '#8f7d01'
           
         },
         fontSize: {

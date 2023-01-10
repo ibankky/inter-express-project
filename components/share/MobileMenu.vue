@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed bottom-0 w-full bg-white shadow-lg">
+  <div class="fixed bottom-0 w-full bg-white ">
     <div class="flex w-100 py-5 px-1 text-[12px]">
       <div class="w-1/6 text-center justify-center">
         <nuxt-link :to="'/'">

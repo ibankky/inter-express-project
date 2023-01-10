@@ -86,7 +86,6 @@ export default defineComponent({
   components: { CreateshopModal, GraphLine },
   setup() {
     const Products = ProductData.products.items;
-    console.log(Products);
     return {
       Products,
     };
