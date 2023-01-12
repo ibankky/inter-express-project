@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="vuesax_linear_messages" data-name="vuesax/linear/messages" transform="translate(-556 -314)">
+    <g id="messages" transform="translate(556 314)">
+      <g id="Group" transform="translate(2.329 7.042)">
+        <path id="Vector" d="M18.606,5.577v4.657a7.062,7.062,0,0,1-.047.873c-.268,3.144-2.119,4.7-5.531,4.7h-.466a.938.938,0,0,0-.745.373l-1.4,1.863a1.318,1.318,0,0,1-2.236,0l-1.4-1.863a1.075,1.075,0,0,0-.745-.373H5.577C1.863,15.812,0,14.892,0,10.235V5.577C0,2.166,1.572.314,4.7.047A7.062,7.062,0,0,1,5.577,0h7.452Q18.6,0,18.606,5.577Z" fill="none" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+      <path id="Vector-2" data-name="Vector" d="M18.56,5.577v4.657q0,5.135-4.7,5.531a7.062,7.062,0,0,0,.047-.873V10.235q0-5.571-5.577-5.577H.873A7.062,7.062,0,0,0,0,4.7C.268,1.572,2.119,0,5.531,0h7.452Q18.554,0,18.56,5.577Z" transform="translate(7.088 2.329)" fill="none" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+      <g id="Vector-3" data-name="Vector" fill="none" opacity="0">
+        <path d="M0,0H28V28H0Z" stroke="none"/>
+        <path d="M 1 1 L 1 27 L 27 27 L 27 1 L 1 1 M 0 0 L 28 0 L 28 28 L 0 28 L 0 0 Z" stroke="none" fill="#777"/>
+      </g>
+      <path id="Vector-4" data-name="Vector" d="M.5.5h.01" transform="translate(15.249 14.958)" fill="none" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Vector-5" data-name="Vector" d="M.5.5h.01" transform="translate(11.166 14.958)" fill="none" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Vector-6" data-name="Vector" d="M.5.5h.01" transform="translate(7.083 14.958)" fill="none" stroke="#777" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
