@@ -81,7 +81,8 @@
     <div class="flex px-2">
       
       <div class="w-full">
-           <button type="button" class="flex w-full bg-blue border-none text-white  text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]">
+           <button type="button" class="flex w-full bg-blue border-none text-white  text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]"
+           @click="clickLabel()">
                 <span class="text-[16px]">พิมพ์ลาเบล</span>
            </button>
       </div>
@@ -94,8 +95,14 @@
 import { defineComponent, ref, useContext } from "vue";
 export default defineComponent({
   components: {},
+  
   setup() {
-    return {};
+    function clickLabel(){
+      this.$router.push('/order/printlabel')
+    }
+    return {
+      clickLabel
+    };
   },
 });
 </script>

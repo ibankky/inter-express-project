@@ -24,7 +24,7 @@
       </div>
       
     </div>
-    <div class="container bg-gray-2 bg-opacity-20 min-h-[75vh]">
+    <div class="container bg-gray-2 bg-opacity-20 min-h-[60vh]">
         <div class="bg-white w-full mb-4 p-4 mb-2">
           <div class="flex">
             <div class="w-1/12">
@@ -80,11 +80,12 @@
             </div>
         </div>
     </div>
-    <div class="fixed bottom-0 w-full shadow-lg py-2">
+    <div class="fixed bottom-0 bg-white w-full shadow-lg py-2">
     <div class="flex px-2">
       
       <div class="w-full">
-           <button type="button" class="flex w-full border  border-red text-red  text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]">
+           <button type="button" class="flex w-full border  border-red text-red  text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]"
+           @click="clickCancel()">
                 <span class="text-[16px]">ยกเลิกออเดอร์</span>
            </button>
       </div>
@@ -98,7 +99,12 @@ import { defineComponent, ref, useContext } from "vue";
 export default defineComponent({
   components: {},
   setup() {
-    return {};
+    function clickCancel() {
+       this.$router.push('/order')
+    }
+    return {
+      clickCancel
+    };
   },
 });
 </script>

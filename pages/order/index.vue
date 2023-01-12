@@ -46,7 +46,7 @@
               <p class="text-blue" v-else-if="showOrderType == 'cancel'">ยกเลิก</p>
             </div>
           </div>
-          <div v-for="(product, index) in order.products" :key="index" class="flex mt-4">
+          <div v-for="(product, index) in order.products" :key="index" class="flex mt-4" @click="clickOrder(showOrderType)">
             <div class="w-1/6">
               <img src="/images/item-demo.png" alt="" class="w-full" />
             </div>
@@ -71,14 +71,6 @@
               <p>Total <span class="text-blue">฿{{order.price}}</span></p>
             </div>
             
-            <div class="w-1/2 flex justify-end items-center" v-if="showOrderType == 'label'">
-              <button
-                type="button"
-                class="flex bg-blue border-none text-white text-center justify-center items-center h-[30px] mb-[10px] rounded-[6px] px-2"
-              >
-                <span class="text-[14px]">Generate QR</span>
-              </button>
-            </div>
             <div class="w-1/2 flex justify-end items-center" v-if="showOrderType == 'payment'">
               <button
                 type="button"
@@ -91,7 +83,7 @@
             <div class="w-1/2 flex justify-end items-center" v-if="showOrderType == 'waiting-delivery'">
               <button
                 type="button"
-                class="flex bg-blue border-none text-white text-center justify-center items-center h-[30px] mb-[10px] rounded-[6px] px-"
+                class="flex bg-blue border-none text-white text-center justify-center items-center h-[30px] mb-[10px] rounded-[6px] px-4"
               >
                 <span class="text-[14px]">จัดส่งแล้ว</span>
               </button>
@@ -211,13 +203,23 @@ export default defineComponent({
     function clickCancel(){
       this.$router.push('/order/detail/cancel')
     }
+    function clickOrder(type) {
+      if(type == 'label'){
+         this.$router.push('/order/detail/label')
+      }else if (type == 'waiting-delivery'){
+        this.$router.push('/order/detail/waiting-delivery')
+      }else if (type == 'delivery'){
+        this.$router.push('/order/detail/delivery')
+      }
+    }
     return {
       activeMenuChange,
 
       showOrderType,
       orderLists,
 
-      clickCancel
+      clickCancel,
+      clickOrder
     };
   },
 });

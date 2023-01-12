@@ -113,6 +113,7 @@
               mb-[10px]
               rounded-[6px]
             "
+            @click="clickLabel()"
           >
             <span class="text-[16px]">พิมพ์ลาเบล</span>
           </button>
@@ -126,7 +127,12 @@ import { defineComponent, ref, useContext } from "vue";
 export default defineComponent({
   components: {},
   setup() {
-    return {};
+     function clickLabel (){
+        this.$router.push('/order/printlabel')
+    }
+    return {
+      clickLabel
+    };
   },
 });
 </script>

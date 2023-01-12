@@ -7,7 +7,8 @@
             </label>
       </div>
       <div class="w-4/6">
-           <button type="button" class="flex w-full bg-blue border-none text-white  text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]">
+           <button type="button" class="flex w-full bg-blue border-none text-white  text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]"
+           @click="clickbooking()">
                 <span class="text-[16px]">สร้างใบรายการนำส่ง</span>
            </button>
       </div>
@@ -19,7 +20,11 @@ import { defineComponent, ref } from "vue";
 export default defineComponent({
   props: {},
   setup() {
+    function clickbooking (){
+        this.$router.push('/order/detail/booking')
+    }
     return {
+      clickbooking
     };
   },
 });

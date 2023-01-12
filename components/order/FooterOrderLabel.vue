@@ -7,8 +7,9 @@
             </label>
       </div>
       <div class="w-4/6">
-           <button type="button" class="flex w-full bg-blue border-none text-white  text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]">
-                <span class="text-[16px]">Generate QR Code</span>
+           <button type="button" class="flex w-full bg-blue border-none text-white  text-center justify-center items-center h-[48px] mb-[10px] rounded-[6px]"
+            @click="clickLabel()">
+                <span class="text-[16px]">ที่ต้องพิมพ์ลาเบล</span>
            </button>
       </div>
     </div>
@@ -19,7 +20,11 @@ import { defineComponent, ref } from "vue";
 export default defineComponent({
   props: {},
   setup() {
+   function clickLabel(){
+      this.$router.push('/order/printlabel')
+    }
     return {
+      clickLabel
     };
   },
 });
