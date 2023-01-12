@@ -3,7 +3,7 @@
     <HeaderOrder :title="'พิมพ์ลาเบล'"></HeaderOrder>
     <div class="container bg-gray-2 bg-opacity-20"> 
       <div class="modal-overlay w-full h-[95vh]">
-        <div class="w-2/3 mt-24">
+        <div class="mx-4 mt-10">
           <img src="/images/label-demo.png">
         </div>
         
