@@ -12,17 +12,6 @@
         </div>
       </div>
       <div class="bg-white p-4 mt-4 mb-4 rounded-[6px]">
-<<<<<<< HEAD
-        <div class="my-4">สถานะการจัดส่ง</div>
-        <div class="flex py-4 border-b border-gray">
-          <div class="w-1/2">วันที่ต้องการรถ:</div>
-          <div class="w-1/2 flex justify-end">ศุกร์ 11 พ.ย. 2023</div>
-        </div>
-        <div class="flex py-4">
-          <div class="w-1/2">วันที่เข้ารับ:</div>
-          <div class="w-1/2 flex justify-end">9.00 - 12.00 น</div>
-        </div>
-=======
         <div style="margin-left:10px">
         <div class="mb-2">สถานะการจัดส่ง</div>
 <div class="wrapper">
@@ -34,7 +23,6 @@
 </ul>
 </div>
 </div>
->>>>>>> feature/order-ui
       </div>
       
     </div>
@@ -92,8 +80,6 @@ export default defineComponent({
 });
 </script>
 <style lang="css" scoped>
-<<<<<<< HEAD
-=======
 .wrapper {
 	 width: 330px;
 	 font-family: 'Helvetica';
@@ -157,5 +143,4 @@ export default defineComponent({
  .StepProgress strong {
 	 display: block;
 }
->>>>>>> feature/order-ui
 </style>
