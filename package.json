@@ -26,8 +26,10 @@
     "@nuxt/image": "^0.7.1",
     "@nuxtjs/tailwindcss": "^4.2.1",
     "@tailwindcss/forms": "^0.5.3",
-    "postcss": "^8.4.4",
+    "autoprefixer": "^9.8.8",
+    "postcss": "^7.0.39",
     "sass": "^1.54.9",
-    "sass-loader": "10"
+    "sass-loader": "10",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
   }
 }
