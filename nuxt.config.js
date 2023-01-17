@@ -2,7 +2,7 @@ export default {
   env: {
     baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   },
-  target: 'static',
+  //target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'inter-express',
