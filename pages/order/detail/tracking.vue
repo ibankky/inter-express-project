@@ -12,6 +12,7 @@
         </div>
       </div>
       <div class="bg-white p-4 mt-4 mb-4 rounded-[6px]">
+<<<<<<< HEAD
         <div class="my-4">สถานะการจัดส่ง</div>
         <div class="flex py-4 border-b border-gray">
           <div class="w-1/2">วันที่ต้องการรถ:</div>
@@ -21,6 +22,19 @@
           <div class="w-1/2">วันที่เข้ารับ:</div>
           <div class="w-1/2 flex justify-end">9.00 - 12.00 น</div>
         </div>
+=======
+        <div style="margin-left:10px">
+        <div class="mb-2">สถานะการจัดส่ง</div>
+<div class="wrapper">
+<ul class="StepProgress">
+  <div class="StepProgress-item is-done"><strong>กำลังนะส่ง สินค้า</strong></div>
+  <div class="StepProgress-item is-done"><strong>กำลังนำส่ง ถึงศูนย์ IEL</strong></div>
+  <div class="StepProgress-item is-done"><strong>พนักงานเข้ารับสินค้า</strong></div>
+  <div class="StepProgress-item "><strong>ผู้ขายเตรียม พัศดุ</strong></div>
+</ul>
+</div>
+</div>
+>>>>>>> feature/order-ui
       </div>
       
     </div>
@@ -78,4 +92,70 @@ export default defineComponent({
 });
 </script>
 <style lang="css" scoped>
+<<<<<<< HEAD
+=======
+.wrapper {
+	 width: 330px;
+	 font-family: 'Helvetica';
+	 font-size: 14px;
+}
+ .StepProgress {
+	 position: relative;
+	 padding-left: 45px;
+	 list-style: none;
+}
+ .StepProgress::before {
+	 display: inline-block;
+	 content: '';
+	 position: absolute;
+	 top: 0;
+	 left: 15px;
+	 width: 10px;
+	 height: 100%;
+}
+ .StepProgress-item {
+	 position: relative;
+	 counter-increment: list;
+}
+ .StepProgress-item:not(:last-child) {
+	 padding-bottom: 20px;
+}
+ .StepProgress-item::before {
+	 display: inline-block;
+	 content: '';
+	 position: absolute;
+	 left: -30px;
+	 height: 100%;
+	 width: 10px;
+}
+ .StepProgress-item::after {
+	 content: '';
+	 display: inline-block;
+	 position: absolute;
+	 top: 0;
+	 left: -37px;
+	 width: 20px;
+	 height: 20px;
+	 border: 2px solid #CCC;
+	 border-radius: 50%;
+   padding: 1px;
+	 background-color: #ccc;
+}
+ .StepProgress-item.is-done::before {
+	 border-left: 2px solid green;
+}
+ .StepProgress-item.is-done::after {
+	 font-size: 13px;
+	 color: #FFF;
+	 text-align: center;
+	 border: 1px solid #0072BC;
+	 background-color: #0072BC;
+}
+ .StepProgress-item.current::before {
+	 border-left: 2px solid #0072BC;
+}
+ .StepProgress strong {
+	 display: block;
+}
+>>>>>>> feature/order-ui
 </style>
